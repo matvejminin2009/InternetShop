@@ -1,0 +1,61 @@
+* { margin: 0; padding: 0; font-display: none; list-style-type: none;}
+
+main {
+    width: 100%;
+    font-family: sans-serif;
+}
+
+
+.test {
+    height: 200vh
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    background-color: inherit;
+}
+
+.headerBox {
+    background-color: black ;
+    color: white
+}
+
+@media (min-width: 375px) {
+    .headerBox {display: flex; justify-content: space-between; align-items: center; margin: 1rem; padding: 1rem; border-radius: 20px;}
+    header p:hover {color: gray; transition: 0.225s;}
+}
+
+/* Footer */
+
+footer {
+    background: black;
+    color: white;
+}
+
+footer h1 {
+    display: flex;
+}
+
+footer p {
+    display: flex;
+}
+
+@media (min-width: 375px) {
+    footer {padding: 1rem;}
+    footer h1 {font-size: 18pt; padding-bottom: 8pt; justify-content: center;}
+    footer p {padding: 10px; font-size: 12pt; justify-content: center;}
+    .footerLinksMin a img {width: 4rem; height: 4rem; padding: 0.7rem; border-radius: 20px;}
+    .footerLinksMin {display: flex; padding: 1rem; justify-content: center;}
+    .footerLinksMax {display: none;}
+}
+
+@media (min-width: 720px) {
+    footer {padding: 5rem;}
+    footer h1 {font-size: 20pt; padding-bottom: 16pt; justify-content: left;}
+    footer p {padding: 6pt; font-size: 12pt; justify-content: left;}
+    .footerLinksMax a {font-size: 10pt; color: white;}
+    .footerLinksMax {display: flex; padding: 1rem; flex-direction: column; gap: 6pt;}
+    .footerLinksMin {display: none;}
+}

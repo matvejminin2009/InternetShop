@@ -1,4 +1,4 @@
-* { margin: 0; padding: 0; font-display: none; list-style-type: none;}
+* { margin: 0; padding: 0; text-decoration: none; list-style-type: none;}
 
 main {
     width: 100%;
@@ -7,24 +7,42 @@ main {
 
 
 .test {
-    height: 200vh
+    height: 200vh;
 }
 
 /* Header */
 
 header {
     width: 100%;
+    position: fixed;
     background-color: inherit;
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,  100%);
+    backdrop-filter: linear-gradient(blur(3px) saturate(100%));
+
 }
 
 .headerBox {
+    display: flex;
     background-color: black ;
     color: white
 }
 
+header p:hover {color: gray; transition: 0.225s;}
+
 @media (min-width: 375px) {
-    .headerBox {display: flex; justify-content: space-between; align-items: center; margin: 1rem; padding: 1rem; border-radius: 20px;}
-    header p:hover {color: gray; transition: 0.225s;}
+    .headerBox {justify-content: space-around; align-items: center; margin: 1rem; padding: 1rem; border-radius: 20px;}
+    .headerButtons {display: flex; gap: 10pt}
+    header h1 {display: none;}
+    header p {font-size: 12pt;}
+}
+
+@media (min-width: 720px) {
+    .headerBox {justify-content: space-around}
+    .headerButtons {display: flex; align-items: center; gap: 30%;}
+    header h1 {display: block;}
+    header p {font-size: 16pt;}
+    header h2 {display: none;}
 }
 
 /* Footer */
@@ -58,4 +76,37 @@ footer p {
     .footerLinksMax a {font-size: 10pt; color: white;}
     .footerLinksMax {display: flex; padding: 1rem; flex-direction: column; gap: 6pt;}
     .footerLinksMin {display: none;}
+}
+
+/* Homepage */
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Verdana;
+    padding-bottom: 1000px;
+}
+
+.homepage a:hover {
+    transition: 0.225s;
+    color: gray;
+    border: 1pt solid gray;
+}
+
+.homepage a {
+    border: 1pt solid black;
+    padding: 4pt; border-radius: 10pt; 
+    color: black;
+}
+
+
+@media (min-width: 375px) {
+    .homepage {display: flex; flex-direction: column; gap: 10pt; padding-inline: 20pt;}
+    .homepage p {text-align: center;}
+}
+
+@media (min-width: 720px) {
+    .homepage a {display: none;}
 }

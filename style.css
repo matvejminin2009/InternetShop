@@ -5,11 +5,6 @@ main {
     font-family: sans-serif;
 }
 
-
-.test {
-    height: 200vh;
-}
-
 /* Header */
 
 header {
@@ -86,7 +81,7 @@ footer p {
     align-items: center;
     height: 100vh;
     font-family: Verdana;
-    padding-bottom: 1000px;
+    padding-bottom: 100px;
 }
 
 .homepage a:hover {
@@ -109,4 +104,47 @@ footer p {
 
 @media (min-width: 720px) {
     .homepage a {display: none;}
+}
+
+/* Products */
+
+#product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+}
+
+.product {
+    display: block;
+    border: 1px solid black;
+}
+
+.product h1 {
+    font-family: monospace;
+}
+
+.product button {
+    display: block;
+    margin: auto;
+}
+
+@media (min-width: 375px) {
+    #product {grid-template-columns: repeat(2, 1fr); gap: 5pt; margin: 7pt;}
+    .product {padding: 5pt; border-radius: 10pt;}
+    .product h1 {font-size: 12pt ;line-height: 1.4; min-height: calc(1.4em * 2); max-height: calc(1.4em * 2); padding: 10pt}
+    .product p {padding-left: 10pt;}
+    .product img {width: 18vh; height: 18vh; align-items: center; justify-content: center;}
+    .product button {font-family: monospace; border-radius: 5pt; padding: 10pt 5pt; border: 0.5px solid black; margin-top: 10pt; margin-bottom: 10pt;}
+}
+
+@media (min-width: 720px) {
+    #product {grid-template-columns: repeat(3, 1fr);}
+}
+
+@media (min-width: 1200px) {
+    #product {grid-template-columns: repeat(4, 1fr);}
+    .product {padding: 20pt; border-radius: 15pt;}
+    .product h1 {font-size: 18pt; line-height: 1.8; min-height: calc(1.8em * 2); max-height: calc(1.8em * 2); padding: 15pt}
+    .product p {padding-left: 20pt; font-size: 15pt;}
+    .product img {display: block; margin: auto; width: 80%; height: 300px}
 }
